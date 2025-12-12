@@ -3,10 +3,15 @@ import './App.css'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Agent from './pages/Agent'
+import { Navbar } from './components/common/Navbar'
+
 
 function App() {
+ 
   return (
-   <div>
+   <div className='relative'>
+    
+      <Navbar/>
     <Routes>
       <Route  path='/' element={<Home/>}/>
       <Route  path='/project' element={<Projects/>}/>

@@ -5,11 +5,12 @@ import Video from "../components/Home/Video"
 const Home = () => {
   return (
     <div>
-      <div className="h-screen w-screen fixed">
+      <div className="min-h-screen w-screen fixed">
         <Video/>
       </div>
-      <div className=" h-screen w-screen relative  font-[lausanneLight]">
+      <div className="flex flex-col justify-between gap-20 w-screen relative font-[lausanneMedium]">
         <HeroText/>
+        <div className="h-10"></div>
         <BottomText/>
       </div>
     </div>
