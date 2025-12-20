@@ -1,0 +1,36 @@
+.marquee {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .marquee__inner {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: marquee 7s linear infinite;
+  }
+
+  .item-img,
+  .item-text {
+    margin: 0 32px; /* spacing between ALL items */
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .link {
+    transform-style: preserve-3d;
+    backface-visibility: visible;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
