@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import h1Img1 from '../../assets/Thumbnail.png'
 import h1Img2 from  '../../assets/Thumbnail2.jpg'
 import meggieImg from '../../assets/MEGGIE_640X290_2.jpg';
@@ -9,10 +9,12 @@ import './Navbar.css';
 import { IoClose } from "react-icons/io5";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { NavbarContext } from "../context/NavContext";
 const FullScreenNavbar = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const fullNavLink=useRef(null);
-  
+    const {navOpen,setNavOpen} =useContext(NavbarContext);
+      console.log(navOpen,setNavOpen);
       
     useGSAP(() => {
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -77,7 +79,7 @@ const FullScreenNavbar = () => {
   const styleH1 = "text-8xl uppercase font-medium";
   
   return (
-    <div id="fullScreenNav" className="h-screen w-full absolute  flex flex-col">
+    <div id="fullScreenNav" className={` ${!navOpen && 'hidden'} h-screen w-full absolute  flex flex-col`}>
         <div  className="h-screen w-full fixed">
         <div className='h-full w-full flex '>
         <div className='stairing h-full w-1/5 bg-black'></div>

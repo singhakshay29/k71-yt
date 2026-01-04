@@ -24,10 +24,17 @@ export const Navbar = () => {
           navGreenRef.current.style.height = "0%";
         }}
         className='h-14 relative w-60'>
-        <div className='bg-black h-full w-full'></div>
+        <div className='relative bg-black h-full w-full'>
+          
         <div
           ref={navGreenRef}
           className='bg-[#D3FD50] absolute top-0  h-0 w-full transition-all'></div>
+            <div className="relative h-full  flex flex-col px-8 gap-4 justify-center items-end ">
+              <div className="w-20 h-0.5 bg-white"></div>
+              <div className="w-16 h-0.5 bg-white"></div>
+            </div>
+        </div>
+          
       </div>
     </div>
   );
